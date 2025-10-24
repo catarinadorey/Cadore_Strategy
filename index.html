@@ -36,7 +36,7 @@
             border-radius: 12px;
         }
         
-        /* CABEÇALHO E LOGÓTIPO (Simulação) */
+        /* CABEÇALHO E LOGÓTIPO */
         header {
             text-align: center;
             padding-bottom: 30px;
@@ -44,38 +44,22 @@
             border-bottom: 1px solid var(--cor-texto-principal);
         }
 
-        .logo-simulado {
-            /* Adaptação visual do logótipo anexo */
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-texto-destaque);
+        /* ESTILO PARA A IMAGEM DO LOGÓTIPO */
+        .logo-original-container {
+            /* Estilo para garantir que o logótipo caiba bem e mantenha a proporção */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
-        .logo-simulado h1 {
-            font-size: 3.5em;
-            margin: 0;
-            letter-spacing: 4px;
-            font-weight: 700;
+        .logo-original-container img {
+            /* Esta é a imagem do logótipo que deverá apontar para o URL correto */
+            max-width: 350px; /* Largura máxima, ajuste se necessário */
+            height: auto;
+            /* Filtro de cores opcional, dependendo de como a imagem original foi exportada */
+            /* filter: drop-shadow(0px 0px 1px var(--cor-texto-destaque)); */ 
         }
-
-        .logo-simulado p {
-            color: var(--cor-texto-principal);
-            font-size: 1.1em;
-            margin: 5px 0 0;
-            letter-spacing: 2px;
-        }
-
-        /* ÍCONE DO LEÃO (Simulação) */
-        .icone-leao {
-            /* Representação visual simplificada do ícone no centro */
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 10px;
-            background-color: var(--cor-texto-principal);
-            -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M50 0C22.386 0 0 22.386 0 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zm0 10c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20zM30 65c0 11.046 8.954 20 20 20s20-8.954 20-20H30z"/></svg>') no-repeat center;
-            mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M50 0C22.386 0 0 22.386 0 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zm0 10c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20zM30 65c0 11.046 8.954 20 20 20s20-8.954 20-20H30z"/></svg>') no-repeat center;
-            background-size: contain;
-        }
-
 
         /* INTRODUÇÃO DA ESTRATÉGIA */
         .introducao {
@@ -97,7 +81,7 @@
         }
 
 
-        /* ESTRUTURA DAS FASES */
+        /* ESTRUTURA DAS FASES (Mantida) */
         .fase {
             margin-bottom: 40px;
             padding: 30px 0;
@@ -125,7 +109,7 @@
             font-size: 1em;
         }
 
-        /* Ícone / Número da Fase (Design Clean) */
+        /* Ícone / Número da Fase */
         .numero-fase {
             background-color: var(--cor-texto-principal);
             color: var(--cor-base-conteudo);
@@ -182,8 +166,8 @@
                 margin: 20px;
                 padding: 20px;
             }
-            .logo-simulado h1 {
-                font-size: 2.5em;
+            .logo-original-container img {
+                max-width: 100%;
             }
             .fase h2 {
                 font-size: 1.6em;
@@ -198,16 +182,14 @@
 
     <div class="container">
         <header>
-            <div class="icone-leao"></div>
-            <div class="logo-simulado">
-                <h1>CA'DORE</h1>
-                <p>UNIQUE JEWELLERY</p>
+            <div class="logo-original-container">
+                <img src="URL_DA_SUA_IMAGEM_AQUI" alt="Logotipo Ca'dore - Unique Jewellery">
             </div>
         </header>
 
         <div class="introducao">
             <h2>Introdução</h2>
-            <p>A Ca'dore pretende ser uma marca de jóias que combina autenticidade, sofisticação e inovação, criando peças únicas que irão unir o clássico ao rústico[cite: 9]. O objetivo é que cada criação reflita a essência e a personalidade de quem as usar, tornando-se não apenas um acessório de destaque, mas uma verdadeira extensão da individualidade[cite: 10].</p>
+            <p>A Ca'dore pretende ser uma marca de jóias que combina autenticidade, sofisticação e inovação, criando peças únicas que irão unir o clássico ao rústico. O objetivo é que cada criação reflita a essência e a personalidade de quem as usar, tornando-se não apenas um acessório de destaque, mas uma verdadeira extensão da individualidade.</p>
         </div>
 
         <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 40px; border: 1px solid var(--cor-principal-fundo);">
