@@ -33,12 +33,12 @@
             padding: 50px 20px;
         }
         
-        /* CABEÇALHO E LOGÓTIPO - REFORÇO VISUAL */
+        /* CABEÇALHO E LOGÓTIPO */
         header {
             text-align: center;
             padding-bottom: 50px;
             margin-bottom: 30px;
-            border-bottom: 3px solid var(--cor-base-conteudo); /* Linha divisória mais grossa e clara */
+            border-bottom: 3px solid var(--cor-base-conteudo);
         }
 
         /* ESTILO PARA A IMAGEM DO LOGÓTIPO */
@@ -51,18 +51,17 @@
         }
 
         .logo-original-container img {
-            max-width: 380px; /* Levemente maior para mais impacto */
+            max-width: 380px; 
             height: auto;
             margin-bottom: 15px;
-            /* Se a imagem estiver em PNG com fundo transparente, isto deve realçá-la no fundo verde */
         }
         
         /* PLACEMENT DO SUBTÍTULO ABAIXO DO LOGÓTIPO */
         .header-subtitulo {
             font-family: 'Lato', sans-serif;
-            color: var(--cor-base-conteudo); /* Cor clara para destaque */
+            color: var(--cor-base-conteudo);
             font-size: 1.2em;
-            letter-spacing: 5px; /* Espaçamento moderno */
+            letter-spacing: 5px;
             text-transform: uppercase;
             margin: 0;
         }
@@ -76,12 +75,12 @@
         }
         .introducao p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.4em; /* Levemente maior */
+            font-size: 1.4em;
             font-style: italic;
             max-width: 800px;
             margin: 15px auto;
             line-height: 1.6;
-            color: var(--cor-base-conteudo); /* Texto claro no fundo escuro */
+            color: var(--cor-base-conteudo);
         }
 
         /* ESTRUTURA DAS FASES */
@@ -105,27 +104,117 @@
         }
 
         .fase .fase-descricao {
-            color: var(--cor-base-conteudo); /* Mudado para bege para mais contraste no fundo verde */
+            color: var(--cor-base-conteudo);
             margin: 5px 0 0 0;
             font-style: italic;
             font-size: 1.1em;
             margin-left: 20px;
         }
 
-        /* Ícone / Número da Fase */
+        /* ÍCONE INTEGRADO NO NÚMERO DA FASE */
         .numero-fase {
-            background-color: var(--cor-texto-destaque);
-            color: var(--cor-base-conteudo);
-            border-radius: 50%;
+            /* O ícone agora usa a imagem IconCadore.PNG */
+            background-color: transparent;
             width: 55px;
             height: 55px;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+        }
+
+        .numero-fase .fundo-numero {
+             /* Círculo de fundo para a numeração */
+            background-color: var(--cor-texto-destaque);
+            color: var(--cor-base-conteudo);
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             font-size: 1.8em;
             font-weight: 700;
+            position: absolute;
+            z-index: 1;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
+
+        .numero-fase .icon-overlay {
+            /* O Ícone da Cadore por cima do número ou à parte */
+            position: absolute;
+            width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
+            height: 30px;
+            z-index: 2;
+            top: -15px; /* Posição acima do número */
+            left: 50%;
+            transform: translateX(-50%);
+            content: '';
+            background: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG') no-repeat center;
+            background-size: contain;
+            /* Filtro para garantir que o ícone fique branco/claro no fundo verde, se for essa a cor desejada */
+            filter: brightness(2); 
+        }
+        
+        /* Corrigindo a cor do número para ser visível no ícone - Vamos usar uma sobreposição simples */
+        .numero-fase .fundo-numero {
+            background-color: var(--cor-texto-secundario); /* Cor escura */
+            color: var(--cor-base-conteudo); /* Número claro */
+            position: relative;
+        }
+        
+        .numero-fase .icon-overlay {
+            /* Simplificamos a sobreposição, usando o ícone ao lado ou por cima.
+               Nesta versão, o ícone é usado como um destaque sutil ao lado do número (o melhor design-wise). */
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: -60px;
+            top: 50%;
+            transform: translateY(-50%);
+            filter: none; /* Deixar as cores originais do ícone se for PNG */
+        }
+        
+        .fase-header {
+            align-items: flex-start;
+        }
+        
+        /* Novo estilo para o número da fase com Ícone ao lado */
+        .fase-number-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .fase-number-group .icon-marker {
+            width: 35px;
+            height: 35px;
+            background: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG') no-repeat center;
+            background-size: contain;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+            margin-top: 5px;
+        }
+        
+        .fase-number-group .numero-simples {
+            background-color: var(--cor-texto-destaque);
+            color: var(--cor-base-conteudo);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        /* Substituindo a estrutura antiga do numero-fase */
+        .fase-header {
+            align-items: center;
+        }
+        .fase h2, .fase .fase-descricao {
+             margin-left: 0;
+        }
+
 
         /* Grid de Ações */
         .acoes {
@@ -136,10 +225,10 @@
         }
 
         .acao-item {
-            background-color: var(--cor-base-conteudo); /* Bloco de Conteúdo */
+            background-color: var(--cor-base-conteudo);
             padding: 25px;
             border-radius: 8px;
-            border-top: 5px solid var(--cor-texto-secundario); /* Destaque na borda superior */
+            border-top: 5px solid var(--cor-texto-secundario);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -164,7 +253,6 @@
             font-size: 0.9em;
             font-weight: 400;
         }
-
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
@@ -190,7 +278,7 @@
     <div class="container">
         <header>
             <div class="logo-original-container">
-                <img src="https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/CADORELOGO.PNG" alt="Logotipo Ca'dore - Unique Jewellery">
+                <img src="https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/LogoCadore.PNG" alt="Logotipo Ca'dore - Unique Jewellery">
             </div>
             <p class="header-subtitulo">ESTRATÉGIA DE REBRANDING | UNIQUE JEWELLERY</p>
         </header>
@@ -201,7 +289,10 @@
 
         <div class="fase">
             <div class="fase-header">
-                <div class="numero-fase">1</div>
+                <div class="fase-number-group">
+                    <span class="icon-marker"></span>
+                    <span class="numero-simples">1</span>
+                </div>
                 <div>
                     <h2>Aplicação e Storytelling (Execução)</h2>
                     <p class="fase-descricao">Com a identidade definida, o foco passa para a criação de ativos e narrativa.</p>
@@ -234,7 +325,10 @@
 
         <div class="fase">
             <div class="fase-header">
-                <div class="numero-fase">2</div>
+                 <div class="fase-number-group">
+                    <span class="icon-marker"></span>
+                    <span class="numero-simples">2</span>
+                </div>
                 <div>
                     <h2>Pré-Lançamento (Cultivo da Antecipação)</h2>
                     <p class="fase-descricao">Comunicar a evolução à base antiga de forma exclusiva, gerando curiosidade e desejo.</p>
@@ -267,7 +361,10 @@
 
         <div class="fase">
             <div class="fase-header">
-                <div class="numero-fase">3</div>
+                <div class="fase-number-group">
+                    <span class="icon-marker"></span>
+                    <span class="numero-simples">3</span>
+                </div>
                 <div>
                     <h2>Lançamento (Conversão e Posicionamento)</h2>
                     <p class="fase-descricao">Utilizar a performance para maximizar as vendas e cimentar o posicionamento exclusivo.</p>
@@ -300,7 +397,10 @@
 
         <div class="fase">
             <div class="fase-header">
-                <div class="numero-fase">4</div>
+                <div class="fase-number-group">
+                    <span class="icon-marker"></span>
+                    <span class="numero-simples">4</span>
+                </div>
                 <div>
                     <h2>Consistência e Estratégia Contínua</h2>
                     <p class="fase-descricao">Sustentar o novo posicionamento e otimizar as operações com base em dados financeiros.</p>
