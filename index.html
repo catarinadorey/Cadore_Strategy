@@ -6,10 +6,10 @@
     <title>CA'DORE | Estratégia de Rebranding & Lançamento</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* PALETA DE CORES CA'DORE (Base Mafalda Leão) */
+        /* PALETA DE CORES CA'DORE */
         :root {
             --cor-principal-fundo: #97A085;      /* Verde Seco Principal */
-            --cor-base-conteudo: #F2F0DA;        /* Bege / Branco Sujo (Usado para o texto/blocos) */
+            --cor-base-conteudo: #F2F0DA;        /* Bege / Branco Sujo (Fundo dos Blocos de Ação) */
             --cor-texto-principal: #141410;      /* Preto Sofisticado (Texto) */
             --cor-texto-secundario: #535443;     /* Verde/Cinzento Escuro (Destaque/Secundário) */
             --cor-acento-claro: #FFFFFF;         /* Branco Puro */
@@ -20,7 +20,7 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco Único */
+            background-color: var(--cor-principal-fundo);
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -33,42 +33,55 @@
             padding: 50px 20px;
         }
         
-        /* CABEÇALHO E LOGÓTIPO */
+        /* CABEÇALHO E LOGÓTIPO - REFORÇO VISUAL */
         header {
             text-align: center;
             padding-bottom: 50px;
             margin-bottom: 30px;
-            border-bottom: 1px solid var(--cor-texto-secundario);
+            border-bottom: 3px solid var(--cor-base-conteudo); /* Linha divisória mais grossa e clara */
         }
 
         /* ESTILO PARA A IMAGEM DO LOGÓTIPO */
         .logo-original-container {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
         }
 
         .logo-original-container img {
-            max-width: 350px; 
+            max-width: 380px; /* Levemente maior para mais impacto */
             height: auto;
+            margin-bottom: 15px;
+            /* Se a imagem estiver em PNG com fundo transparente, isto deve realçá-la no fundo verde */
         }
+        
+        /* PLACEMENT DO SUBTÍTULO ABAIXO DO LOGÓTIPO */
+        .header-subtitulo {
+            font-family: 'Lato', sans-serif;
+            color: var(--cor-base-conteudo); /* Cor clara para destaque */
+            font-size: 1.2em;
+            letter-spacing: 5px; /* Espaçamento moderno */
+            text-transform: uppercase;
+            margin: 0;
+        }
+
 
         /* INTRODUÇÃO DA ESTRATÉGIA */
         .introducao {
             text-align: center;
             margin-bottom: 60px;
             padding: 0 40px;
-            color: var(--cor-base-conteudo); /* Cor de texto em contraste com o fundo */
         }
         .introducao p {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3em;
+            font-size: 1.4em; /* Levemente maior */
             font-style: italic;
             max-width: 800px;
             margin: 15px auto;
-            line-height: 1.5;
-            color: var(--cor-base-conteudo);
+            line-height: 1.6;
+            color: var(--cor-base-conteudo); /* Texto claro no fundo escuro */
         }
 
         /* ESTRUTURA DAS FASES */
@@ -92,7 +105,7 @@
         }
 
         .fase .fase-descricao {
-            color: var(--cor-texto-destaque);
+            color: var(--cor-base-conteudo); /* Mudado para bege para mais contraste no fundo verde */
             margin: 5px 0 0 0;
             font-style: italic;
             font-size: 1.1em;
@@ -126,7 +139,7 @@
             background-color: var(--cor-base-conteudo); /* Bloco de Conteúdo */
             padding: 25px;
             border-radius: 8px;
-            border: 1px solid var(--cor-texto-secundario);
+            border-top: 5px solid var(--cor-texto-secundario); /* Destaque na borda superior */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -179,6 +192,7 @@
             <div class="logo-original-container">
                 <img src="https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/CADORELOGO.PNG" alt="Logotipo Ca'dore - Unique Jewellery">
             </div>
+            <p class="header-subtitulo">ESTRATÉGIA DE REBRANDING | UNIQUE JEWELLERY</p>
         </header>
 
         <div class="introducao">
