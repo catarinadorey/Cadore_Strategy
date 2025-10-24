@@ -20,7 +20,7 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-principal-fundo);
+            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco Único */
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -54,7 +54,7 @@
             max-width: 380px; 
             height: auto;
             margin-bottom: 0px; 
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* Mantendo a sombra para dar profundidade */
         }
         
         /* PLACEMENT DO SUBTÍTULO ABAIXO DO LOGÓTIPO */
@@ -112,7 +112,7 @@
             font-size: 1.1em;
         }
 
-        /* Ícone da Fase - AGORA É APENAS O ÍCONE (NOVO ESTILO) */
+        /* Ícone da Fase - AGORA É APENAS O ÍCONE (SIMPLES E TRANSPARENTE) */
         .fase-number-group {
             display: flex;
             align-items: center;
@@ -120,18 +120,24 @@
         .fase-number-group .icon-marker {
             width: 60px; 
             height: 60px; 
-            /* Removido border-radius, background-color, e border para usar o PNG diretamente */
-            
-            /* NOVO ÍCONE REDONDO: IconCadore(redondo).PNG */
-            background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore(redondo).PNG');
+            /* NOVO ÍCONE REDONDO SEM FUNDO: IconCadore(redondosemfundo).PNG */
+            background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore(redondosemfundo).PNG');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: contain; /* Usa o tamanho total da div */
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+            background-size: contain; 
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* Mantendo a sombra para um efeito 3D sutil */
             flex-shrink: 0; 
         }
         
-        /* Removido .numero-simples */
+        /* Marcador de Fase Simples e Pequeno (para contraste) */
+        .fase-number-group .numero-simples {
+            width: 15px; 
+            height: 15px; 
+            border-radius: 50%;
+            background-color: var(--cor-texto-destaque); /* Preto sutil */
+            flex-shrink: 0; 
+            margin-left: 10px; 
+        }
 
         /* Grid de Ações */
         .acoes {
@@ -298,7 +304,7 @@
                 </div>
                 <div class="acao-item">
                     <strong>Paid Media (Foco em Vendas)</strong>
-                    <p>Maior alocação orçamental para Retargeting, Google Shopping e Meta Ads (Catálogo) com foco na arte e exclusividade.</p>
+                    <p>Maior alocação do orçamento para Retargeting, Google Shopping e Meta Ads (Catálogo) com foco na arte e exclusividade.</p>
                     <small>Responsabilidade: Catarina (Paid Media Principal)</small>
                 </div>
                 <div class="acao-item">
