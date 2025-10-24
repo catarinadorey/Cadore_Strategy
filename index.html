@@ -36,7 +36,7 @@
         /* CABEÇALHO E LOGÓTIPO - ESPAÇAMENTO AJUSTADO */
         header {
             text-align: center;
-            padding-bottom: 30px; /* Reduzido de 50px */
+            padding-bottom: 30px; 
             margin-bottom: 30px;
             border-bottom: 3px solid var(--cor-base-conteudo);
         }
@@ -53,7 +53,7 @@
         .logo-original-container img {
             max-width: 380px; 
             height: auto;
-            margin-bottom: 5px; /* Reduzido de 15px */
+            margin-bottom: 0px; /* Mínimo espaçamento da imagem para o subtítulo */
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
         }
         
@@ -65,6 +65,7 @@
             letter-spacing: 5px;
             text-transform: uppercase;
             margin: 0;
+            padding-top: 5px; /* Adiciona um pequeno espaçamento do subtítulo para baixo */
         }
 
 
@@ -99,46 +100,52 @@
         .fase h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2em;
-            color: var(--cor-texto-destaque);
+            color: var(--cor-texto-secundario); /* Corrigido para a cor do destaque/título */
             margin: 0 0 0 20px;
             font-weight: 700;
         }
 
         .fase .fase-descricao {
             color: var(--cor-base-conteudo);
-            margin: 5px 0 0 0;
+            margin: 5px 0 0 20px;
             font-style: italic;
             font-size: 1.1em;
-            margin-left: 20px;
         }
 
-        /* Ícone / Número da Fase */
+        /* Ícone / Número da Fase - REFORÇADO E CIRCULAR */
         .fase-number-group {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px; /* Reduzido o espaçamento entre ícone e número */
         }
         .fase-number-group .icon-marker {
-            width: 35px;
-            height: 35px;
-            /* IconCadore.PNG */
-            background: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG') no-repeat center;
-            background-size: contain;
+            width: 60px; /* Aumentado */
+            height: 60px; /* Aumentado */
+            border-radius: 50%; /* Circular */
+            background-color: var(--cor-base-conteudo); /* Fundo claro para realçar */
+            border: 2px solid var(--cor-texto-secundario); /* Borda de destaque */
+            /* URL do IconCadore.PNG */
+            background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 70%; /* Ajuste o tamanho do ícone dentro do círculo */
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
-            margin-top: 5px;
+            margin-top: 0;
+            flex-shrink: 0; /* Impede que ele encolha */
         }
         
         .fase-number-group .numero-simples {
             background-color: var(--cor-texto-secundario);
             color: var(--cor-base-conteudo);
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
+            width: 50px; /* Levemente maior para compensar o ícone maior */
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: 700;
+            flex-shrink: 0;
         }
 
 
@@ -196,6 +203,12 @@
             }
             .introducao {
                 padding: 0 10px;
+            }
+            .fase-number-group {
+                gap: 5px;
+            }
+            .fase h2, .fase .fase-descricao {
+                margin-left: 10px;
             }
         }
     </style>
