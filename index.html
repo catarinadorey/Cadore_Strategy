@@ -6,22 +6,23 @@
     <title>Cadore | Estratégia de Rebranding & Lançamento</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* ESTILOS CSS - Design Minimalista e Luxuoso */
+        /* ESTILOS CSS - Design Minimalista com Paleta Cadore (Verdes Secos) */
         :root {
-            /* Paleta de Cores: Inspirada em Ouro Envelhecido, Prata e Tons Neutros de Luxo */
-            --cor-base-fundo: #F8F8F8; /* Branco Sujo / Creme Claro */
-            --cor-texto-principal: #3A3A3A;
-            --cor-texto-secundario: #6A6A6A;
-            --cor-ouro-destaque: #B8860B; /* Ouro Escuro / Destaque Elegante */
-            --cor-divisoria: #E0E0E0;
+            /* Paleta de Cores Cadore (Base Mafalda Leão) [cite: 94] */
+            --cor-fundo-claro: #F2F0DA;      /* Bege / Branco Sujo [cite: 106] */
+            --cor-verde-seco-escuro: #535443; /* Verde/Cinzento Escuro [cite: 103] */
+            --cor-verde-seco-claro: #974085;  /* Verde Seco Destaque [cite: 100] */
+            --cor-carvao: #141410;          /* Preto Sofisticado [cite: 109] */
+            --cor-texto-principal: var(--cor-carvao);
+            --cor-texto-secundario: var(--cor-verde-seco-escuro);
             --cor-sombra: rgba(0, 0, 0, 0.05);
         }
 
         body {
-            font-family: 'Lato', sans-serif; /* Corpo de texto limpo e legível */
+            font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-base-fundo);
+            background-color: var(--cor-fundo-claro); /* Fundo Limpo e Elegante */
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -45,28 +46,30 @@
         }
 
         header h1 {
-            color: var(--cor-ouro-destaque);
-            font-family: 'Playfair Display', serif; /* Fonte de cabeçalho sofisticada */
-            font-size: 3.2em;
+            color: var(--cor-verde-seco-claro);
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
             margin: 0;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             font-weight: 700;
         }
 
         header p {
             color: var(--cor-texto-secundario);
-            font-size: 1.1em;
+            font-size: 1.2em;
             margin-top: 5px;
-            border-top: 1px solid var(--cor-divisoria);
+            border-top: 2px solid var(--cor-verde-seco-escuro);
             display: inline-block;
             padding-top: 10px;
+            letter-spacing: 1px;
+            font-style: italic;
         }
 
         /* ESTRUTURA DAS FASES */
         .fase {
             margin-bottom: 50px;
             padding: 30px 0;
-            border-bottom: 1px solid var(--cor-divisoria);
+            border-bottom: 1px solid var(--cor-verde-seco-claro);
         }
         
         .fase-header {
@@ -77,7 +80,7 @@
 
         .fase h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8em;
+            font-size: 2em;
             color: var(--cor-texto-principal);
             margin: 0 0 0 15px;
             font-weight: 700;
@@ -92,15 +95,15 @@
 
         /* Ícone / Número da Fase (Design Clean) */
         .numero-fase {
-            background-color: var(--cor-ouro-destaque);
+            background-color: var(--cor-verde-seco-claro);
             color: white;
             border-radius: 50%;
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: 700;
             box-shadow: 0 4px 8px var(--cor-sombra);
         }
@@ -114,19 +117,19 @@
         }
 
         .acao-item {
-            background-color: var(--cor-base-fundo);
+            background-color: var(--cor-fundo-claro);
             padding: 20px;
             border-radius: 8px;
-            border-left: 3px solid var(--cor-ouro-destaque);
+            border-left: 3px solid var(--cor-verde-seco-escuro);
             transition: background-color 0.3s ease;
         }
 
         .acao-item:hover {
-            background-color: #F0F0F0;
+            background-color: #EFEFEF;
         }
 
         .acao-item strong {
-            color: var(--cor-ouro-destaque);
+            color: var(--cor-verde-seco-escuro);
             display: block;
             margin-bottom: 8px;
             font-size: 1.1em;
@@ -142,9 +145,9 @@
         .acao-item small {
             display: block;
             margin-top: 10px;
-            color: var(--cor-texto-secundario);
-            font-size: 0.8em;
-            font-weight: 300;
+            color: var(--cor-verde-seco-claro);
+            font-size: 0.85em;
+            font-weight: 400;
         }
 
         /* Responsividade */
@@ -169,38 +172,44 @@
 
     <div class="container">
         <header>
-            <h1>Cadore</h1>
-            <p>Estratégia de Rebranding: Da Tradição à Arte Exclusiva.</p>
+            <h1>CADORE</h1>
+            <p>UNIQUE JEWELLERY | Da Tradição à Arte Exclusiva.</p>
         </header>
+
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 40px; border: 1px solid #ddd;">
+            <h3 style="color: var(--cor-verde-seco-escuro); margin-top: 0; font-family: 'Playfair Display', serif;">Nota de Branding</h3>
+            <p style="font-size: 0.95em;">A nova identidade da **Cadore** (baseada na proposta Mafalda Leão) foca-se em transmitir **Autenticidade, Sofisticação e Inovação**[cite: 9, 145]. O ícone do Leão será a âncora visual para a **Força** e a **Nobreza** da marca.</p>
+            <p style="font-size: 0.95em;">O branding visual (logótipo, paleta de cores, tipografia) está **CONCLUÍDO**[cite: 12, 94, 114], permitindo-nos focar nas fases de execução da estratégia.</p>
+        </div>
 
         <div class="fase">
             <div class="fase-header">
                 <div class="numero-fase">1</div>
                 <div>
-                    <h2>Análise e Definição (Fundação do Novo Valor)</h2>
-                    <p class="fase-descricao">Solidificar a identidade: o compromisso com o design único e a arte da joalharia.</p>
+                    <h2>Aplicação e Storytelling (Execução)</h2>
+                    <p class="fase-descricao">Com a identidade definida, o foco passa para a criação de ativos e narrativa.</p>
                 </div>
             </div>
             
             <div class="acoes">
                 <div class="acao-item">
-                    <strong>Definir o DNA Original (O Manifesto)</strong>
-                    <p>Criar a narrativa que valida o preço: história, inspiração e processo exclusivo por trás de cada peça.</p>
-                    <small>Responsabilidade: Irmã (Design/Criação)</small>
+                    <strong>Finalizar Materiais de Branding</strong>
+                    <p>Produção e design final de ativos: papel timbrado, cartões-de-visita (com ícone do leão) e embalagens, seguindo o novo estilo limpo e elegante.</p>
+                    <small>Responsabilidade: Irmã e Designer (Em Execução)</small>
                 </div>
                 <div class="acao-item">
-                    <strong>Mapeamento de Público (Arte e Exclusividade)</strong>
-                    <p>Analisar o perfil das clientes antigas para garantir a transição e segmentar novas *Personas* que valorizem o design autoral.</p>
+                    <strong>Criar o Manifesto (Narrativa Final)</strong>
+                    <p>Redigir o texto final de apresentação da marca, que una o **clássico ao rústico**  e a **força do Leão**[cite: 117].</p>
                     <small>Responsabilidade: Você (Marketing)</small>
                 </div>
                 <div class="acao-item">
-                    <strong>Rebranding Visual e Tom de Voz</strong>
-                    <p>Desenho de um logótipo minimalista e elegante. Adotar um Tom de Voz sofisticado, artístico e inspirador em todos os canais.</p>
-                    <small>Responsabilidade: Irmã e Designer</small>
+                    <strong>Público-Alvo e Persona</strong>
+                    <p>Mapear as clientes antigas e definir o novo público que valoriza a **arte autoral** e o conceito de *Unique Jewellery*[cite: 43].</p>
+                    <small>Responsabilidade: Você (Marketing)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Imagens e Narrativa de Processo</strong>
-                    <p>Produzir conteúdos de alta-qualidade: fotos *lifestyle* e vídeos do **processo manual** da sua irmã (o fator humano).</p>
+                    <p>Produzir fotos de *lifestyle* e vídeos do **processo manual** da sua irmã (o fator humano/autenticidade).</p>
                     <small>Responsabilidade: Irmã e Fotógrafo</small>
                 </div>
             </div>
@@ -218,22 +227,22 @@
             <div class="acoes">
                 <div class="acao-item">
                     <strong>Comunicação à Base Leal</strong>
-                    <p>E-mail Marketing/Mensagem Direta: "A Cadore evolui e você, como parte da nossa história, tem prioridade."</p>
+                    <p>E-mail Marketing/Mensagem Direta: "A Cadore evolui, honrando a sua tradição e abraçando a arte exclusiva. Você tem prioridade."</p>
                     <small>Responsabilidade: Você (Marketing/CRM)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Geração de Teasers</strong>
-                    <p>Publicar *Reels* e *Stories* com vislumbres artísticos e parciais da nova coleção, usando a estética do novo Branding.</p>
+                    <p>Publicar *Reels* e *Stories* com vislumbres artísticos e parciais da nova coleção, usando a estética dos Tons Neutros e do Verde Seco.</p>
                     <small>Responsabilidade: Irmã (Conteúdo)</small>
                 </div>
                 <div class="acao-item">
-                    <strong>Captação VIP e Novo E-commerce</strong>
-                    <p>Lançar o novo website (ou secção) e uma *Landing Page* para inscrição no **Acesso Antecipado** à coleção.</p>
+                    <strong>Lançamento do Novo E-commerce</strong>
+                    <p>Lançar o novo website (ou secção) com o novo Branding e uma *Landing Page* para inscrição no **Acesso Antecipado** à coleção.</p>
                     <small>Responsabilidade: Você (E-commerce/Web)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Paid Media (Acumulação de Leads)</strong>
-                    <p>Campanhas com baixo orçamento para acumular e-mails (Leads) para o Acesso VIP, segmentando públicos novos e de retargeting.</p>
+                    <p>Campanhas focadas em acumular e-mails (Leads) para a lista VIP, segmentando públicos novos e de retargeting.</p>
                     <small>Responsabilidade: Você (Paid Media)</small>
                 </div>
             </div>
@@ -244,7 +253,7 @@
                 <div class="numero-fase">3</div>
                 <div>
                     <h2>Lançamento (Conversão e Posicionamento)</h2>
-                    <p class="fase-descricao">Utilizar a performance para maximizar as vendas e cimentar o posicionamento de marca exclusiva.</p>
+                    <p class="fase-descricao">Utilizar a performance para maximizar as vendas e cimentar o posicionamento exclusivo.</p>
                 </div>
             </div>
             
@@ -256,12 +265,12 @@
                 </div>
                 <div class="acao-item">
                     <strong>Paid Media (Foco em Vendas)</strong>
-                    <p>Maior alocação orçamental para Retargeting, Google Shopping e Meta Ads (Catálogo), explorando a exclusividade.</p>
+                    <p>Maior alocação orçamental para Retargeting, Google Shopping e Meta Ads (Catálogo) com foco na arte e exclusividade.</p>
                     <small>Responsabilidade: Você (Paid Media Principal)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Validação Social e Influência</strong>
-                    <p>Ações com *Micro-influencers* alinhados com o novo nicho de luxo discreto para gerar prova social autêntica.</p>
+                    <p>Ações com *Micro-influencers* alinhados com o nicho de luxo discreto para gerar prova social autêntica e alinhada com a **Sofisticação**.</p>
                     <small>Responsabilidade: Você e a Irmã</small>
                 </div>
                 <div class="acao-item">
@@ -289,12 +298,12 @@
                 </div>
                 <div class="acao-item">
                     <strong>Calendário Editorial Fixo</strong>
-                    <p>Garantir que o conteúdo de "arte e produção" se torna um pilar fixo da comunicação semanal.</p>
+                    <p>Garantir que o conteúdo de "arte e produção" se torna um pilar fixo da comunicação semanal, reforçando a **Autenticidade** da marca.</p>
                     <small>Responsabilidade: Irmã (Conteúdo)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Reforço da Experiência (Unboxing)</strong>
-                    <p>Garantir que a embalagem e o *unboxing* refletem o novo luxo discreto da marca Cadore.</p>
+                    <p>Garantir que a embalagem e o *unboxing* refletem o novo luxo discreto da marca, utilizando a paleta de cores definida[cite: 94].</p>
                     <small>Responsabilidade: Irmã e Logística</small>
                 </div>
                 <div class="acao-item">
