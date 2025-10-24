@@ -20,7 +20,7 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco Único */
+            background-color: var(--cor-principal-fundo);
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -33,10 +33,10 @@
             padding: 50px 20px;
         }
         
-        /* CABEÇALHO E LOGÓTIPO */
+        /* CABEÇALHO E LOGÓTIPO - ESPAÇAMENTO AJUSTADO */
         header {
             text-align: center;
-            padding-bottom: 50px;
+            padding-bottom: 30px; /* Reduzido de 50px */
             margin-bottom: 30px;
             border-bottom: 3px solid var(--cor-base-conteudo);
         }
@@ -47,14 +47,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-bottom: 10px;
+            margin-bottom: 0;
         }
 
         .logo-original-container img {
             max-width: 380px; 
             height: auto;
-            margin-bottom: 15px;
-            /* Se for PNG sem fundo, esta sombra sutil pode ajudar a destacá-lo ainda mais */
+            margin-bottom: 5px; /* Reduzido de 15px */
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
         }
         
@@ -82,7 +81,7 @@
             max-width: 800px;
             margin: 15px auto;
             line-height: 1.6;
-            color: var(--cor-base-conteudo); /* Texto claro no fundo escuro */
+            color: var(--cor-base-conteudo);
         }
 
         /* ESTRUTURA DAS FASES */
@@ -113,7 +112,7 @@
             margin-left: 20px;
         }
 
-        /* Ícone / Número da Fase (MANTIDO o IconCadore.PNG) */
+        /* Ícone / Número da Fase */
         .fase-number-group {
             display: flex;
             align-items: center;
@@ -122,7 +121,7 @@
         .fase-number-group .icon-marker {
             width: 35px;
             height: 35px;
-            /* IconCadore.PNG - Assumindo que este também está no repositório */
+            /* IconCadore.PNG */
             background: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG') no-repeat center;
             background-size: contain;
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
@@ -130,7 +129,7 @@
         }
         
         .fase-number-group .numero-simples {
-            background-color: var(--cor-texto-destaque);
+            background-color: var(--cor-texto-secundario);
             color: var(--cor-base-conteudo);
             border-radius: 50%;
             width: 45px;
@@ -152,7 +151,7 @@
         }
 
         .acao-item {
-            background-color: var(--cor-base-conteudo); /* Bloco de Conteúdo */
+            background-color: var(--cor-base-conteudo);
             padding: 25px;
             border-radius: 8px;
             border-top: 5px solid var(--cor-texto-secundario);
@@ -160,7 +159,7 @@
         }
 
         .acao-item strong {
-            color: var(--cor-texto-destaque);
+            color: var(--cor-texto-secundario);
             display: block;
             margin-bottom: 8px;
             font-size: 1.2em;
@@ -208,7 +207,7 @@
             <div class="logo-original-container">
                 <img src="https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/LogoCadore(semfundo).PNG" alt="Logotipo Ca'dore - Unique Jewellery">
             </div>
-            <p class="header-subtitulo">ESTRATÉGIA DE REBRANDING | UNIQUE JEWELLERY</p>
+            <p class="header-subtitulo">ESTRATÉGIA DE REBRANDING | CA'DORE</p>
         </header>
 
         <div class="introducao">
