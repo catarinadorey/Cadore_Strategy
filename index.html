@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadore | Estratégia de Rebranding & Lançamento</title>
+    <title>CA'DORE | Estratégia de Rebranding & Lançamento</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* ESTILOS CSS - Design Minimalista com Paleta Cadore (Verdes Secos) */
+        /* PALETA DE CORES CA'DORE (Base Mafalda Leão) */
         :root {
-            /* Paleta de Cores Cadore (Base Mafalda Leão) [cite: 94] */
-            --cor-fundo-claro: #F2F0DA;      /* Bege / Branco Sujo [cite: 106] */
-            --cor-verde-seco-escuro: #535443; /* Verde/Cinzento Escuro [cite: 103] */
-            --cor-verde-seco-claro: #974085;  /* Verde Seco Destaque [cite: 100] */
-            --cor-carvao: #141410;          /* Preto Sofisticado [cite: 109] */
-            --cor-texto-principal: var(--cor-carvao);
-            --cor-texto-secundario: var(--cor-verde-seco-escuro);
-            --cor-sombra: rgba(0, 0, 0, 0.05);
+            --cor-principal-fundo: #97A085;      /* Verde Seco Principal */
+            --cor-base-conteudo: #F2F0DA;        /* Bege / Branco Sujo (Fundo de Conteúdo) */
+            --cor-texto-principal: #535443;      /* Verde/Cinzento Escuro (Texto Principal) */
+            --cor-texto-destaque: #141410;       /* Preto Sofisticado (Destaque/Títulos) */
+            --cor-acento-claro: #FFFFFF;         /* Branco Puro (Ícones/Símbolos) */
+            --cor-acento-escuro: #6A6A6A;
+            --cor-sombra: rgba(0, 0, 0, 0.2);
         }
 
         body {
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-fundo-claro); /* Fundo Limpo e Elegante */
+            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco */
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -32,44 +31,77 @@
             max-width: 1000px;
             margin: 50px auto;
             padding: 40px;
-            background: white;
+            background: var(--cor-base-conteudo); /* Bloco de Conteúdo Claro */
             box-shadow: 0 10px 30px var(--cor-sombra);
             border-radius: 12px;
         }
-
-        /* TÍTULO PRINCIPAL (Header) */
+        
+        /* CABEÇALHO E LOGÓTIPO (Simulação) */
         header {
             text-align: center;
             padding-bottom: 30px;
             margin-bottom: 40px;
-            position: relative;
+            border-bottom: 1px solid var(--cor-texto-principal);
         }
 
-        header h1 {
-            color: var(--cor-verde-seco-claro);
+        .logo-simulado {
+            /* Adaptação visual do logótipo anexo */
             font-family: 'Playfair Display', serif;
+            color: var(--cor-texto-destaque);
+        }
+
+        .logo-simulado h1 {
             font-size: 3.5em;
             margin: 0;
             letter-spacing: 4px;
             font-weight: 700;
         }
 
-        header p {
-            color: var(--cor-texto-secundario);
-            font-size: 1.2em;
-            margin-top: 5px;
-            border-top: 2px solid var(--cor-verde-seco-escuro);
-            display: inline-block;
-            padding-top: 10px;
-            letter-spacing: 1px;
-            font-style: italic;
+        .logo-simulado p {
+            color: var(--cor-texto-principal);
+            font-size: 1.1em;
+            margin: 5px 0 0;
+            letter-spacing: 2px;
         }
+
+        /* ÍCONE DO LEÃO (Simulação) */
+        .icone-leao {
+            /* Representação visual simplificada do ícone no centro */
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 10px;
+            background-color: var(--cor-texto-principal);
+            -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M50 0C22.386 0 0 22.386 0 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zm0 10c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20zM30 65c0 11.046 8.954 20 20 20s20-8.954 20-20H30z"/></svg>') no-repeat center;
+            mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path fill="white" d="M50 0C22.386 0 0 22.386 0 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zm0 10c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20zM30 65c0 11.046 8.954 20 20 20s20-8.954 20-20H30z"/></svg>') no-repeat center;
+            background-size: contain;
+        }
+
+
+        /* INTRODUÇÃO DA ESTRATÉGIA */
+        .introducao {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px;
+            border-bottom: 1px solid var(--cor-texto-principal);
+        }
+        .introducao p {
+            font-size: 1.1em;
+            color: var(--cor-texto-principal);
+            max-width: 800px;
+            margin: 15px auto;
+        }
+        .introducao h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--cor-texto-destaque);
+            font-size: 1.8em;
+        }
+
 
         /* ESTRUTURA DAS FASES */
         .fase {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             padding: 30px 0;
-            border-bottom: 1px solid var(--cor-verde-seco-claro);
+            border-bottom: 1px solid var(--cor-principal-fundo);
         }
         
         .fase-header {
@@ -81,7 +113,7 @@
         .fase h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2em;
-            color: var(--cor-texto-principal);
+            color: var(--cor-texto-destaque);
             margin: 0 0 0 15px;
             font-weight: 700;
         }
@@ -95,8 +127,8 @@
 
         /* Ícone / Número da Fase (Design Clean) */
         .numero-fase {
-            background-color: var(--cor-verde-seco-claro);
-            color: white;
+            background-color: var(--cor-texto-principal);
+            color: var(--cor-base-conteudo);
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -105,7 +137,6 @@
             align-items: center;
             font-size: 1.6em;
             font-weight: 700;
-            box-shadow: 0 4px 8px var(--cor-sombra);
         }
 
         /* Grid de Ações */
@@ -120,16 +151,11 @@
             background-color: var(--cor-fundo-claro);
             padding: 20px;
             border-radius: 8px;
-            border-left: 3px solid var(--cor-verde-seco-escuro);
-            transition: background-color 0.3s ease;
-        }
-
-        .acao-item:hover {
-            background-color: #EFEFEF;
+            border-left: 3px solid var(--cor-texto-principal);
         }
 
         .acao-item strong {
-            color: var(--cor-verde-seco-escuro);
+            color: var(--cor-texto-destaque);
             display: block;
             margin-bottom: 8px;
             font-size: 1.1em;
@@ -145,7 +171,7 @@
         .acao-item small {
             display: block;
             margin-top: 10px;
-            color: var(--cor-verde-seco-claro);
+            color: var(--cor-texto-secundario);
             font-size: 0.85em;
             font-weight: 400;
         }
@@ -156,7 +182,7 @@
                 margin: 20px;
                 padding: 20px;
             }
-            header h1 {
+            .logo-simulado h1 {
                 font-size: 2.5em;
             }
             .fase h2 {
@@ -172,14 +198,22 @@
 
     <div class="container">
         <header>
-            <h1>CADORE</h1>
-            <p>UNIQUE JEWELLERY | Da Tradição à Arte Exclusiva.</p>
+            <div class="icone-leao"></div>
+            <div class="logo-simulado">
+                <h1>CA'DORE</h1>
+                <p>UNIQUE JEWELLERY</p>
+            </div>
         </header>
 
-        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 40px; border: 1px solid #ddd;">
-            <h3 style="color: var(--cor-verde-seco-escuro); margin-top: 0; font-family: 'Playfair Display', serif;">Nota de Branding</h3>
-            <p style="font-size: 0.95em;">A nova identidade da **Cadore** (baseada na proposta Mafalda Leão) foca-se em transmitir **Autenticidade, Sofisticação e Inovação**[cite: 9, 145]. O ícone do Leão será a âncora visual para a **Força** e a **Nobreza** da marca.</p>
-            <p style="font-size: 0.95em;">O branding visual (logótipo, paleta de cores, tipografia) está **CONCLUÍDO**[cite: 12, 94, 114], permitindo-nos focar nas fases de execução da estratégia.</p>
+        <div class="introducao">
+            <h2>Introdução</h2>
+            <p>A Ca'dore pretende ser uma marca de jóias que combina autenticidade, sofisticação e inovação, criando peças únicas que irão unir o clássico ao rústico[cite: 9]. O objetivo é que cada criação reflita a essência e a personalidade de quem as usar, tornando-se não apenas um acessório de destaque, mas uma verdadeira extensão da individualidade[cite: 10].</p>
+        </div>
+
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 40px; border: 1px solid var(--cor-principal-fundo);">
+            <h3 style="color: var(--cor-texto-destaque); margin-top: 0; font-family: 'Playfair Display', serif;">Nota de Branding</h3>
+            <p style="font-size: 0.95em;">A nova identidade da **Ca'dore** foca-se em transmitir **Autenticidade, Sofisticação e Inovação**. O ícone do Leão será a âncora visual para a **Força** e a **Nobreza** da marca.</p>
+            <p style="font-size: 0.95em;">O branding visual (logótipo, paleta de cores, tipografia) está **CONCLUÍDO**, permitindo-nos focar nas fases de execução da estratégia.</p>
         </div>
 
         <div class="fase">
@@ -194,17 +228,17 @@
             <div class="acoes">
                 <div class="acao-item">
                     <strong>Finalizar Materiais de Branding</strong>
-                    <p>Produção e design final de ativos: papel timbrado, cartões-de-visita (com ícone do leão) e embalagens, seguindo o novo estilo limpo e elegante.</p>
+                    <p>Produção e design final de ativos: papel timbrado, cartões-de-visita (com ícone do leão) e embalagens, seguindo o novo estilo limpo e elegante da Ca'dore.</p>
                     <small>Responsabilidade: Irmã e Designer (Em Execução)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Criar o Manifesto (Narrativa Final)</strong>
-                    <p>Redigir o texto final de apresentação da marca, que una o **clássico ao rústico**  e a **força do Leão**[cite: 117].</p>
+                    <p>Redigir o texto final de apresentação da marca, que una o **clássico ao rústico** e a **força do Leão**.</p>
                     <small>Responsabilidade: Você (Marketing)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Público-Alvo e Persona</strong>
-                    <p>Mapear as clientes antigas e definir o novo público que valoriza a **arte autoral** e o conceito de *Unique Jewellery*[cite: 43].</p>
+                    <p>Mapear as clientes antigas e definir o novo público que valoriza a **arte autoral** e o conceito de *Unique Jewellery*.</p>
                     <small>Responsabilidade: Você (Marketing)</small>
                 </div>
                 <div class="acao-item">
@@ -227,12 +261,12 @@
             <div class="acoes">
                 <div class="acao-item">
                     <strong>Comunicação à Base Leal</strong>
-                    <p>E-mail Marketing/Mensagem Direta: "A Cadore evolui, honrando a sua tradição e abraçando a arte exclusiva. Você tem prioridade."</p>
+                    <p>E-mail Marketing/Mensagem Direta: "A Ca'dore evolui, honrando a sua tradição e abraçando a arte exclusiva. Você tem prioridade."</p>
                     <small>Responsabilidade: Você (Marketing/CRM)</small>
                 </div>
                 <div class="acao-item">
                     <strong>Geração de Teasers</strong>
-                    <p>Publicar *Reels* e *Stories* com vislumbres artísticos e parciais da nova coleção, usando a estética dos Tons Neutros e do Verde Seco.</p>
+                    <p>Publicar *Reels* e *Stories* com vislumbres artísticos e parciais da nova coleção, utilizando a estética dos Tons Neutros e do Verde Seco.</p>
                     <small>Responsabilidade: Irmã (Conteúdo)</small>
                 </div>
                 <div class="acao-item">
@@ -303,7 +337,7 @@
                 </div>
                 <div class="acao-item">
                     <strong>Reforço da Experiência (Unboxing)</strong>
-                    <p>Garantir que a embalagem e o *unboxing* refletem o novo luxo discreto da marca, utilizando a paleta de cores definida[cite: 94].</p>
+                    <p>Garantir que a embalagem e o *unboxing* refletem o novo luxo discreto da marca, utilizando a paleta de cores definida.</p>
                     <small>Responsabilidade: Irmã e Logística</small>
                 </div>
                 <div class="acao-item">
