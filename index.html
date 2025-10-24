@@ -20,7 +20,7 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco Único */
+            background-color: var(--cor-principal-fundo); 
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -54,7 +54,7 @@
             max-width: 380px; 
             height: auto;
             margin-bottom: 0px; 
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* Mantendo a sombra para dar profundidade */
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
         }
         
         /* PLACEMENT DO SUBTÍTULO ABAIXO DO LOGÓTIPO */
@@ -112,31 +112,21 @@
             font-size: 1.1em;
         }
 
-        /* Ícone da Fase - AGORA É APENAS O ÍCONE (SIMPLES E TRANSPARENTE) */
+        /* Ícone da Fase - AGORA ESTÁ MAIOR (75px) */
         .fase-number-group {
             display: flex;
             align-items: center;
         }
         .fase-number-group .icon-marker {
-            width: 60px; 
-            height: 60px; 
+            width: 75px; /* AUMENTADO */
+            height: 75px; /* AUMENTADO */
             /* NOVO ÍCONE REDONDO SEM FUNDO: IconCadore(redondosemfundo).PNG */
             background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore(redondosemfundo).PNG');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain; 
-            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); /* Mantendo a sombra para um efeito 3D sutil */
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
             flex-shrink: 0; 
-        }
-        
-        /* Marcador de Fase Simples e Pequeno (para contraste) */
-        .fase-number-group .numero-simples {
-            width: 15px; 
-            height: 15px; 
-            border-radius: 50%;
-            background-color: var(--cor-texto-destaque); /* Preto sutil */
-            flex-shrink: 0; 
-            margin-left: 10px; 
         }
 
         /* Grid de Ações */
