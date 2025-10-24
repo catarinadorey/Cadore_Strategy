@@ -53,7 +53,7 @@
         .logo-original-container img {
             max-width: 380px; 
             height: auto;
-            margin-bottom: 0px; /* Mínimo espaçamento da imagem para o subtítulo */
+            margin-bottom: 0px; 
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
         }
         
@@ -65,7 +65,7 @@
             letter-spacing: 5px;
             text-transform: uppercase;
             margin: 0;
-            padding-top: 5px; /* Adiciona um pequeno espaçamento do subtítulo para baixo */
+            padding-top: 5px; 
         }
 
 
@@ -100,55 +100,41 @@
         .fase h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2.2em;
-            color: var(--cor-texto-secundario); /* Corrigido para a cor do destaque/título */
-            margin: 0 0 0 20px;
+            color: var(--cor-texto-secundario);
+            margin: 0 0 0 15px; /* Ajustado para estar mais perto do ícone */
             font-weight: 700;
         }
 
         .fase .fase-descricao {
             color: var(--cor-base-conteudo);
-            margin: 5px 0 0 20px;
+            margin: 5px 0 0 15px; /* Ajustado para estar mais perto do ícone */
             font-style: italic;
             font-size: 1.1em;
         }
 
-        /* Ícone / Número da Fase - REFORÇADO E CIRCULAR */
+        /* Ícone da Fase - AGORA É O ÚNICO MARCADOR */
         .fase-number-group {
             display: flex;
             align-items: center;
-            gap: 10px; /* Reduzido o espaçamento entre ícone e número */
+            /* Removido o gap, pois só há 1 elemento */
         }
         .fase-number-group .icon-marker {
-            width: 60px; /* Aumentado */
-            height: 60px; /* Aumentado */
-            border-radius: 50%; /* Circular */
-            background-color: var(--cor-base-conteudo); /* Fundo claro para realçar */
-            border: 2px solid var(--cor-texto-secundario); /* Borda de destaque */
-            /* URL do IconCadore.PNG */
-            background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG');
+            width: 60px; 
+            height: 60px; 
+            border-radius: 50%; 
+            background-color: var(--cor-base-conteudo); 
+            border: 2px solid var(--cor-texto-secundario); 
+            /* NOVO ÍCONE REDONDO: IconCadore(redondo).PNG */
+            background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore(redondo).PNG');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 70%; /* Ajuste o tamanho do ícone dentro do círculo */
+            background-size: 70%; 
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
-            margin-top: 0;
-            flex-shrink: 0; /* Impede que ele encolha */
+            flex-shrink: 0; 
         }
         
-        .fase-number-group .numero-simples {
-            background-color: var(--cor-texto-secundario);
-            color: var(--cor-base-conteudo);
-            border-radius: 50%;
-            width: 50px; /* Levemente maior para compensar o ícone maior */
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.6em;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-
+        /* O número simples foi removido desta versão */
+        
         /* Grid de Ações */
         .acoes {
             display: grid;
@@ -197,18 +183,16 @@
             }
             .fase h2 {
                 font-size: 1.8em;
+                margin-left: 10px;
+            }
+            .fase .fase-descricao {
+                margin-left: 10px;
             }
             .acoes {
                 grid-template-columns: 1fr;
             }
             .introducao {
                 padding: 0 10px;
-            }
-            .fase-number-group {
-                gap: 5px;
-            }
-            .fase h2, .fase .fase-descricao {
-                margin-left: 10px;
             }
         }
     </style>
@@ -231,7 +215,6 @@
             <div class="fase-header">
                 <div class="fase-number-group">
                     <span class="icon-marker"></span>
-                    <span class="numero-simples">1</span>
                 </div>
                 <div>
                     <h2>Aplicação e Storytelling (Execução)</h2>
@@ -242,7 +225,7 @@
             <div class="acoes">
                 <div class="acao-item">
                     <strong>Finalizar Materiais de Branding</strong>
-                    <p>Produção e design final de ativos: papel timbrado, cartões-de-visita (com ícone do leão) e embalagens, seguindo o novo estilo limpo e elegante da Ca'dore.</p>
+                    <p>Produção e design final de ativos: papel timbrado, cartões-de-visita e embalagens, seguindo o novo estilo limpo e elegante da Ca'dore.</p>
                     <small>Responsabilidade: Mafalda e Designer (Em Execução)</small>
                 </div>
                 <div class="acao-item">
@@ -267,7 +250,6 @@
             <div class="fase-header">
                  <div class="fase-number-group">
                     <span class="icon-marker"></span>
-                    <span class="numero-simples">2</span>
                 </div>
                 <div>
                     <h2>Pré-Lançamento (Cultivo da Antecipação)</h2>
@@ -303,7 +285,6 @@
             <div class="fase-header">
                 <div class="fase-number-group">
                     <span class="icon-marker"></span>
-                    <span class="numero-simples">3</span>
                 </div>
                 <div>
                     <h2>Lançamento (Conversão e Posicionamento)</h2>
@@ -339,7 +320,6 @@
             <div class="fase-header">
                 <div class="fase-number-group">
                     <span class="icon-marker"></span>
-                    <span class="numero-simples">4</span>
                 </div>
                 <div>
                     <h2>Consistência e Estratégia Contínua</h2>
