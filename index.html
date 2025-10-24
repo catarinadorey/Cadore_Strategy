@@ -20,7 +20,7 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-principal-fundo);
+            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco Único */
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
@@ -54,6 +54,8 @@
             max-width: 380px; 
             height: auto;
             margin-bottom: 15px;
+            /* Se for PNG sem fundo, esta sombra sutil pode ajudar a destacá-lo ainda mais */
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); 
         }
         
         /* PLACEMENT DO SUBTÍTULO ABAIXO DO LOGÓTIPO */
@@ -80,7 +82,7 @@
             max-width: 800px;
             margin: 15px auto;
             line-height: 1.6;
-            color: var(--cor-base-conteudo);
+            color: var(--cor-base-conteudo); /* Texto claro no fundo escuro */
         }
 
         /* ESTRUTURA DAS FASES */
@@ -111,75 +113,7 @@
             margin-left: 20px;
         }
 
-        /* ÍCONE INTEGRADO NO NÚMERO DA FASE */
-        .numero-fase {
-            /* O ícone agora usa a imagem IconCadore.PNG */
-            background-color: transparent;
-            width: 55px;
-            height: 55px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-
-        .numero-fase .fundo-numero {
-             /* Círculo de fundo para a numeração */
-            background-color: var(--cor-texto-destaque);
-            color: var(--cor-base-conteudo);
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.8em;
-            font-weight: 700;
-            position: absolute;
-            z-index: 1;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-
-        .numero-fase .icon-overlay {
-            /* O Ícone da Cadore por cima do número ou à parte */
-            position: absolute;
-            width: 30px; /* Ajuste o tamanho do ícone conforme necessário */
-            height: 30px;
-            z-index: 2;
-            top: -15px; /* Posição acima do número */
-            left: 50%;
-            transform: translateX(-50%);
-            content: '';
-            background: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG') no-repeat center;
-            background-size: contain;
-            /* Filtro para garantir que o ícone fique branco/claro no fundo verde, se for essa a cor desejada */
-            filter: brightness(2); 
-        }
-        
-        /* Corrigindo a cor do número para ser visível no ícone - Vamos usar uma sobreposição simples */
-        .numero-fase .fundo-numero {
-            background-color: var(--cor-texto-secundario); /* Cor escura */
-            color: var(--cor-base-conteudo); /* Número claro */
-            position: relative;
-        }
-        
-        .numero-fase .icon-overlay {
-            /* Simplificamos a sobreposição, usando o ícone ao lado ou por cima.
-               Nesta versão, o ícone é usado como um destaque sutil ao lado do número (o melhor design-wise). */
-            width: 50px;
-            height: 50px;
-            position: absolute;
-            left: -60px;
-            top: 50%;
-            transform: translateY(-50%);
-            filter: none; /* Deixar as cores originais do ícone se for PNG */
-        }
-        
-        .fase-header {
-            align-items: flex-start;
-        }
-        
-        /* Novo estilo para o número da fase com Ícone ao lado */
+        /* Ícone / Número da Fase (MANTIDO o IconCadore.PNG) */
         .fase-number-group {
             display: flex;
             align-items: center;
@@ -188,6 +122,7 @@
         .fase-number-group .icon-marker {
             width: 35px;
             height: 35px;
+            /* IconCadore.PNG - Assumindo que este também está no repositório */
             background: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore.PNG') no-repeat center;
             background-size: contain;
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
@@ -207,14 +142,6 @@
             font-weight: 700;
         }
 
-        /* Substituindo a estrutura antiga do numero-fase */
-        .fase-header {
-            align-items: center;
-        }
-        .fase h2, .fase .fase-descricao {
-             margin-left: 0;
-        }
-
 
         /* Grid de Ações */
         .acoes {
@@ -225,7 +152,7 @@
         }
 
         .acao-item {
-            background-color: var(--cor-base-conteudo);
+            background-color: var(--cor-base-conteudo); /* Bloco de Conteúdo */
             padding: 25px;
             border-radius: 8px;
             border-top: 5px solid var(--cor-texto-secundario);
@@ -253,6 +180,7 @@
             font-size: 0.9em;
             font-weight: 400;
         }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
@@ -278,7 +206,7 @@
     <div class="container">
         <header>
             <div class="logo-original-container">
-                <img src="https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/LogoCadore.PNG" alt="Logotipo Ca'dore - Unique Jewellery">
+                <img src="https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/LogoCadore(semfundo).PNG" alt="Logotipo Ca'dore - Unique Jewellery">
             </div>
             <p class="header-subtitulo">ESTRATÉGIA DE REBRANDING | UNIQUE JEWELLERY</p>
         </header>
