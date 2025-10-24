@@ -9,11 +9,10 @@
         /* PALETA DE CORES CA'DORE (Base Mafalda Leão) */
         :root {
             --cor-principal-fundo: #97A085;      /* Verde Seco Principal */
-            --cor-base-conteudo: #F2F0DA;        /* Bege / Branco Sujo (Fundo de Conteúdo) */
-            --cor-texto-principal: #535443;      /* Verde/Cinzento Escuro (Texto Principal) */
-            --cor-texto-destaque: #141410;       /* Preto Sofisticado (Destaque/Títulos) */
-            --cor-acento-claro: #FFFFFF;         /* Branco Puro (Ícones/Símbolos) */
-            --cor-acento-escuro: #6A6A6A;
+            --cor-base-conteudo: #F2F0DA;        /* Bege / Branco Sujo (Usado para o texto/blocos) */
+            --cor-texto-principal: #141410;      /* Preto Sofisticado (Texto) */
+            --cor-texto-secundario: #535443;     /* Verde/Cinzento Escuro (Destaque/Secundário) */
+            --cor-acento-claro: #FFFFFF;         /* Branco Puro */
             --cor-sombra: rgba(0, 0, 0, 0.2);
         }
 
@@ -21,32 +20,30 @@
             font-family: 'Lato', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco */
+            background-color: var(--cor-principal-fundo); /* Fundo Verde Seco Único */
             color: var(--cor-texto-principal);
             line-height: 1.6;
             text-rendering: optimizeLegibility;
         }
 
+        /* O container agora serve apenas para centralizar e dar padding */
         .container {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 40px;
-            background: var(--cor-base-conteudo); /* Bloco de Conteúdo Claro */
-            box-shadow: 0 10px 30px var(--cor-sombra);
-            border-radius: 12px;
+            max-width: 900px;
+            margin: 0px auto;
+            padding: 50px 20px;
+            /* Fundo removido para usar o body background */
         }
         
         /* CABEÇALHO E LOGÓTIPO */
         header {
             text-align: center;
-            padding-bottom: 30px;
-            margin-bottom: 40px;
-            border-bottom: 1px solid var(--cor-texto-principal);
+            padding-bottom: 50px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--cor-texto-secundario);
         }
 
         /* ESTILO PARA A IMAGEM DO LOGÓTIPO */
         .logo-original-container {
-            /* Estilo para garantir que o logótipo caiba bem e mantenha a proporção */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -54,38 +51,33 @@
         }
 
         .logo-original-container img {
-            /* Esta é a imagem do logótipo que deverá apontar para o URL correto */
-            max-width: 350px; /* Largura máxima, ajuste se necessário */
+            max-width: 350px; 
             height: auto;
-            /* Filtro de cores opcional, dependendo de como a imagem original foi exportada */
-            /* filter: drop-shadow(0px 0px 1px var(--cor-texto-destaque)); */ 
+            /* Ajuste para garantir que o logótipo se destaca no fundo verde, se necessário */
+            /* filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2)); */
         }
 
         /* INTRODUÇÃO DA ESTRATÉGIA */
         .introducao {
             text-align: center;
-            margin-bottom: 50px;
-            padding: 20px;
-            border-bottom: 1px solid var(--cor-texto-principal);
+            margin-bottom: 60px;
+            padding: 0 40px;
+            color: var(--cor-base-conteudo); /* Cor de texto em contraste com o fundo */
         }
         .introducao p {
-            font-size: 1.1em;
-            color: var(--cor-texto-principal);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            font-style: italic;
             max-width: 800px;
             margin: 15px auto;
-        }
-        .introducao h2 {
-            font-family: 'Playfair Display', serif;
-            color: var(--cor-texto-destaque);
-            font-size: 1.8em;
+            line-height: 1.5;
+            color: var(--cor-base-conteudo);
         }
 
-
-        /* ESTRUTURA DAS FASES (Mantida) */
+        /* ESTRUTURA DAS FASES */
         .fase {
             margin-bottom: 40px;
-            padding: 30px 0;
-            border-bottom: 1px solid var(--cor-principal-fundo);
+            padding: 20px 0;
         }
         
         .fase-header {
@@ -96,31 +88,33 @@
 
         .fase h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2em;
+            font-size: 2.2em;
             color: var(--cor-texto-destaque);
-            margin: 0 0 0 15px;
+            margin: 0 0 0 20px;
             font-weight: 700;
         }
 
         .fase .fase-descricao {
-            color: var(--cor-texto-secundario);
+            color: var(--cor-texto-destaque);
             margin: 5px 0 0 0;
             font-style: italic;
-            font-size: 1em;
+            font-size: 1.1em;
+            margin-left: 20px;
         }
 
         /* Ícone / Número da Fase */
         .numero-fase {
-            background-color: var(--cor-texto-principal);
+            background-color: var(--cor-texto-destaque);
             color: var(--cor-base-conteudo);
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.6em;
+            font-size: 1.8em;
             font-weight: 700;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
         /* Grid de Ações */
@@ -132,48 +126,51 @@
         }
 
         .acao-item {
-            background-color: var(--cor-fundo-claro);
-            padding: 20px;
+            background-color: var(--cor-base-conteudo); /* Bloco de Conteúdo */
+            padding: 25px;
             border-radius: 8px;
-            border-left: 3px solid var(--cor-texto-principal);
+            border: 1px solid var(--cor-texto-secundario);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .acao-item strong {
             color: var(--cor-texto-destaque);
             display: block;
             margin-bottom: 8px;
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-weight: 700;
         }
 
         .acao-item p {
             margin: 0;
             color: var(--cor-texto-principal);
-            font-size: 0.95em;
+            font-size: 1em;
         }
 
         .acao-item small {
             display: block;
             margin-top: 10px;
             color: var(--cor-texto-secundario);
-            font-size: 0.85em;
+            font-size: 0.9em;
             font-weight: 400;
         }
 
         /* Responsividade */
         @media (max-width: 768px) {
             .container {
-                margin: 20px;
                 padding: 20px;
             }
             .logo-original-container img {
-                max-width: 100%;
+                max-width: 90%;
             }
             .fase h2 {
-                font-size: 1.6em;
+                font-size: 1.8em;
             }
             .acoes {
                 grid-template-columns: 1fr;
+            }
+            .introducao {
+                padding: 0 10px;
             }
         }
     </style>
@@ -183,19 +180,12 @@
     <div class="container">
         <header>
             <div class="logo-original-container">
-                <img src="URL_DA_SUA_IMAGEM_AQUI" alt="Logotipo Ca'dore - Unique Jewellery">
+                <img src="https://raw.githubusercontent.com/SEU_UTILIZADOR/SEU_REPOSITORIO/main/6DB85B9C-1614-4353-95FD-7925D2864880.PNG" alt="Logotipo Ca'dore - Unique Jewellery">
             </div>
         </header>
 
         <div class="introducao">
-            <h2>Introdução</h2>
             <p>A Ca'dore pretende ser uma marca de jóias que combina autenticidade, sofisticação e inovação, criando peças únicas que irão unir o clássico ao rústico. O objetivo é que cada criação reflita a essência e a personalidade de quem as usar, tornando-se não apenas um acessório de destaque, mas uma verdadeira extensão da individualidade.</p>
-        </div>
-
-        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 40px; border: 1px solid var(--cor-principal-fundo);">
-            <h3 style="color: var(--cor-texto-destaque); margin-top: 0; font-family: 'Playfair Display', serif;">Nota de Branding</h3>
-            <p style="font-size: 0.95em;">A nova identidade da **Ca'dore** foca-se em transmitir **Autenticidade, Sofisticação e Inovação**. O ícone do Leão será a âncora visual para a **Força** e a **Nobreza** da marca.</p>
-            <p style="font-size: 0.95em;">O branding visual (logótipo, paleta de cores, tipografia) está **CONCLUÍDO**, permitindo-nos focar nas fases de execução da estratégia.</p>
         </div>
 
         <div class="fase">
