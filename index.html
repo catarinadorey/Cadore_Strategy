@@ -101,40 +101,38 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.2em;
             color: var(--cor-texto-secundario);
-            margin: 0 0 0 15px; /* Ajustado para estar mais perto do ícone */
+            margin: 0 0 0 15px; 
             font-weight: 700;
         }
 
         .fase .fase-descricao {
             color: var(--cor-base-conteudo);
-            margin: 5px 0 0 15px; /* Ajustado para estar mais perto do ícone */
+            margin: 5px 0 0 15px; 
             font-style: italic;
             font-size: 1.1em;
         }
 
-        /* Ícone da Fase - AGORA É O ÚNICO MARCADOR */
+        /* Ícone da Fase - AGORA É APENAS O ÍCONE (NOVO ESTILO) */
         .fase-number-group {
             display: flex;
             align-items: center;
-            /* Removido o gap, pois só há 1 elemento */
         }
         .fase-number-group .icon-marker {
             width: 60px; 
             height: 60px; 
-            border-radius: 50%; 
-            background-color: var(--cor-base-conteudo); 
-            border: 2px solid var(--cor-texto-secundario); 
+            /* Removido border-radius, background-color, e border para usar o PNG diretamente */
+            
             /* NOVO ÍCONE REDONDO: IconCadore(redondo).PNG */
             background-image: url('https://raw.githubusercontent.com/catarinadorey/Cadore_Strategy/main/IconCadore(redondo).PNG');
             background-repeat: no-repeat;
             background-position: center;
-            background-size: 70%; 
+            background-size: contain; /* Usa o tamanho total da div */
             filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.2));
             flex-shrink: 0; 
         }
         
-        /* O número simples foi removido desta versão */
-        
+        /* Removido .numero-simples */
+
         /* Grid de Ações */
         .acoes {
             display: grid;
